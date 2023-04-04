@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>五子棋</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #fff;
+        }
+
+        .board {
+            display: grid;
+            grid-template-columns: repeat(15, 32px);
+            grid-template-rows: repeat(15, 32px);
+            grid-gap: 1px;
+            width: 480px;
+            height: 480px;
+            background-color: #f5deb3;
+            padding: 0;
+            box-sizing: border-box;
+            border: 1px solid #000;
+        }
+
+        .cell {
+            width: 32px;
+            height: 32px;
+            background-color: #f5deb3;
+            position: relative;
+            border: 1px solid #000;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        .black::after,
+        .white::after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+        }
+
+        .black::after {
+            background: #000;
+        }
+
+        .white::after {
+            background: #fff;
+        }
+    </style>
+
+
+</head>
+
+<body>
+<div class="board" id="board"></div>
+<script src="gobang.js"></script>
+</body>
+</html>

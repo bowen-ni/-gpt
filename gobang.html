@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>五子棋</title>
+    <style>
+        body {
+            background-color: #C19A6B;
+        }
+        #board {
+            display: grid;
+            grid-template-columns: repeat(15, 34px);
+            grid-template-rows: repeat(15, 34px);
+            gap: 0;
+            background-color: #C19A6B;
+        }
+
+        .cell {
+            width: 34px;
+            height: 34px;
+            border: 1px solid #ccc;
+            position: relative;
+        }
+
+        .cell::after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%; /* 使棋子呈现圆形 */
+        }
+
+        .black::after {
+            width: 25px;
+            height: 25px;
+            background: #000;
+        }
+
+        .white::after {
+            width: 25px;
+            height: 25px;
+            background: #fff;
+        }
+    </style>
+
+<body>
+<div id="board"></div>
+<script src="gobang.js"></script>
+</body>
+</html>

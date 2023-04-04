@@ -1,0 +1,6 @@
+"D:\CLion 2021.3.4\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=D:/CLion 2021.3.4/bin/ninja/win/ninja.exe" -G Ninja "C:\Users\Administrator\Desktop\编程\chatgpt project\五子棋"
+CMake Error at CMakeLists.txt:2 (project):
+  project PROJECT called with incorrect number of arguments
+
+
+-- Configuring incomplete, errors occurred!
